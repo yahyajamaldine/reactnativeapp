@@ -1,6 +1,7 @@
 # reactnativeapp
 
 //A Basic Login and Sing up page
-//install expo 
-//install react-navigation package V : https://reactnavigation.org/
-//then move on on you way for more check my email: yahya003jamaldine@gmail.com
+//Install expo 
+//Install react-navigation package V : https://reactnavigation.org/
+//Move on on you way
+//For more check my email: yahya003jamaldine@gmail.com
