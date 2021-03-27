@@ -7,7 +7,7 @@ export default function Notification(message,duration){
           ToastAndroid.show(message,duration);            
        }       
        return null; 
-}
+} 
 Notification.propTypes={
     message:PropTypes.string,
     duration:PropTypes.number.isRequired           

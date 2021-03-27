@@ -4,23 +4,28 @@ import styles from "./styles";
 
 export default function Login({navigation}){
   const [name, setname] = useState(null);
-  const [pass,setpass]=useState(null)
+  const [pass,setpass]=useState(null);
+  const [email,setemail]=useState(null);
   return(<View style={styles.container}>
-      <Text style={styles.text}>Log In </Text>
+      <Text style={styles.text}>Sing Up </Text>
       <TextInput style={styles.textp} placeholder="Name" onChangeText={e=>{setname(e)}} />
-      <TextInput style={styles.textp} placeholder="Password" secureTextEntry onChangeText={e=>{setpass(e)}} />
+      <TextInput style={styles.textp} placeholder="Email" onChangeText={e=>{setpass(e)}} />
+      <TextInput style={styles.textp} placeholder="Password" secureTextEntry onChangeText={e=>{setemail(e)}} />
       <ButtonContainer onPress={()=>{
-        if(name&&pass){
-          navigation.navigate('home',{
-            names:name
-          })}
-          else{
-            Alert.alert('Please fill missed field');
-          }
+          navigation.navigate('Login');
+          
       }} style={styles.buttoncontainer}>
       <Text style={styles.buttonText}>Log in</Text>
       </ButtonContainer>
-      <ButtonContainer onPress={()=> navigation.navigate('singup')} style={styles.buttoncontainerUP}>
+      <ButtonContainer onPress={()=>{
+               if(name&&pass&&email){
+          navigation.navigate('home',{
+            names:name
+          })}
+             else{
+                   Alert.alert("Please fill any missed field");         
+             }
+      }} style={styles.buttoncontainerUP}>
       <Text style={styles.buttonText}>Sing up </Text>
       </ButtonContainer>
       
